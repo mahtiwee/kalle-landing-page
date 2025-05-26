@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Vallankumous Alkaa Tästä | Verkkokauppa.com AI-Koulutus</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.header {
+    text-align: center;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #0066cc, #004b96);
+    color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.content {
+    padding: 25px 20px;
+}
+.section {
+    margin-bottom: 35px;
+}
+h1 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+h2 {
+    color: #005cb9;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e6f0ff;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+h3 {
+    color: #004b96;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+p {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+.subtitle {
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.95;
+    margin-top: 15px;
+}
+.company-logo-text {
+    font-size: 20px;
+    background: #fff;
+    color: #0066cc;
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight-stat {
+    background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,102,204,0.1);
+}
+.stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0066cc;
+    display: block;
+    margin-bottom: 10px;
+}
+.stat-description {
+    font-size: 18px;
+    color: #333;
+}
+
+.transformation-story {
+    background-color: #f9f9f9;
+    border-left: 5px solid #ff8f00;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 8px;
+    position: relative;
+}
+.transformation-story h4 {
+    color: #ff6f00;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.future-vision {
+    background: linear-gradient(to right, #e6ffe6, #f0f7ff);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+.future-vision::before {
+    content: "TULEVAISUUS";
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    font-size: 80px;
+    color: rgba(0,102,204,0.05);
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.day-in-life {
+    background-color: #fff;
+    border: 2px solid #0066cc;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.time-stamp {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.alexander-cta {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(156,39,176,0.3);
+}
+.alexander-cta::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+.alexander-cta h3 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.alexander-cta p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.alexander-button {
+    display: inline-block;
+    background: white;
+    color: #9c27b0;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.alexander-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.benefit-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.benefit-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004b96;
+    margin-bottom: 10px;
+}
+
+.warning-box {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+.warning-box h4 {
+    color: #856404;
+    margin-top: 0;
+}
+
+.testimonial-slider {
+    background-color: #f0f7ff;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    position: relative;
+}
+.testimonial-quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 20px;
+}
+.testimonial-author {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.cta-button {
+    display: block;
+    background: linear-gradient(135deg, #ff8f00, #ff6f00);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 50px;
+    margin: 30px auto;
+    font-weight: bold;
+    font-size: 20px;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(255, 111, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 111, 0, 0.5);
+}
+
+.price-reveal {
+    text-align: center;
+    margin: 40px 0;
+}
+.price-box {
+    background: linear-gradient(135deg, #fff, #f0f7ff);
+    border: 3px solid #0066cc;
+    border-radius: 15px;
+    padding: 30px;
+    display: inline-block;
+    position: relative;
+}
+.price-amount {
+    font-size: 54px;
+    font-weight: bold;
+    color: #0066cc;
+    line-height: 1;
+}
+.price-period {
+    font-size: 18px;
+    color: #666;
+}
+.price-note {
+    color: #333; /* Changed from red to neutral, or could be #006600 for positive */
+    font-weight: normal; /* Changed from bold */
+    margin-top: 15px;
+    font-size: 16px; /* Ensured consistent font size */
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #777;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f0f0f0;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
+    .stat-number { font-size: 36px; }
+    .alexander-button { padding: 15px 30px; font-size: 16px; }
+    .price-amount { font-size: 42px; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <div class="company-logo-text">AI-SYSTEEMIT</div>
+        <h1>Kuvittele Verkkokauppa.com, Jossa Jokainen Työntekijä On AI-Supervoimainen</h1>
+        <p class="subtitle">Tämä ei ole sci-fiä. Tämä on teidän todellisuutenne 30 päivän päästä.</p>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <div class="highlight-stat">
+                <span class="stat-number">87%</span>
+                <span class="stat-description">Yrityksistä, jotka kouluttavat koko henkilöstönsä AI-työkaluihin, kasvattavat liikevaihtoaan keskimäärin 87% nopeammin kuin kilpailijansa</span>
+            </div>
+
+            <p style="font-size: 18px; text-align: center;"><strong>Verkkokauppa.comin tiimi,</strong> olette juuri nyt historian käännekohdassa. Päätös, jonka teette seuraavien minuuttien aikana, määrittää, oletteko vuoden päästä <strong>markkinajohtaja</strong> vai yksi niistä, jotka ihmettelevät, miten kilpailijat ohittivat teidät.</p>
+        </div>
+
+        <div class="section">
+            <h2>Varoitus: Tämä Ei Ole Tavallinen Koulutus</h2>
+            <div class="warning-box">
+                <h4>⚠️ Jos etsitte tylsää PowerPoint-maratonia...</h4>
+                <p>...jossa konsultti lukee kalvoja 8 tuntia, olette väärässä paikassa. Tämä on <strong>hands-on transformaatio</strong>, jossa jokainen osallistuja rakentaa omat AI-työkalunsa ja lähtee kotiin valmiina mullistamaan työnsä.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Näin AI Mullistaa Jokaisen Työpäivän Verkkokauppa.comilla</h2>
+            
+            <div class="day-in-life">
+                <div class="time-stamp">💼 Myyntitiimi</div>
+                <p><strong>Ennen:</strong> Tuotesuositukset perustuvat mutu-tuntumaan. Asiakkaat eksyvät 50 000 tuotteen viidakossa.<br>
+                <strong>AI:n kanssa:</strong> Jokainen asiakas saa henkilökohtaiset suositukset ostohistorian ja käyttäytymisen perusteella. Keskiostos kasvaa 35%, kun asiakkaat löytävät juuri oikeat tuotteet.</p>
+            </div>
+
+            <div class="day-in-life">
+                <div class="time-stamp">🎧 Asiakaspalvelu</div>
+                <p><strong>Ennen:</strong> Samat kysymykset toistuvat satoja kertoja päivässä. Jonot kasvavat, asiakkaat turhautuvat.<br>
+                <strong>AI:n kanssa:</strong> Chatbot vastaa välittömästi peruskysymyksiin 24/7. Asiakaspalvelijat keskittyvät monimutkaisiin tapauksiin ja rakentavat aitoja asiakassuhteita. Tyytyväisyys nousee 4.2 → 4.8 tähtiin.</p>
+            </div>
+
+            <div class="day-in-life">
+                <div class="time-stamp">📱 Markkinointi</div>
+                <p><strong>Ennen:</strong> Yksi uutiskirje kaikille. Somepäivitykset vievät tunteja. Kampanjat ovat geneerisiä.<br>
+                <strong>AI:n kanssa:</strong> AI luo personoidut viestit eri kohderyhmille sekunneissa. Instagram-sisältö syntyy napin painalluksella. Kampanjat osuvat kohdalleen → klikkausprosentti +180%.</p>
+            </div>
+
+            <div class="day-in-life">
+                <div class="time-stamp">📊 Johto & Analytiikka</div>
+                <p><strong>Ennen:</strong> Raportit kootaan manuaalisesti. Päätökset perustuvat eiliseen dataan.<br>
+                <strong>AI:n kanssa:</strong> Reaaliaikaiset dashboardit näyttävät trendit heti. AI ennustaa kysynnän ja varoittaa pullonkauloista. Strategiset päätökset perustuvat dataan, ei arvauksiin.</p>
+            </div>
+        </div>
+
+        <div class="alexander-cta">
+            <h3>📞 Viimeistellään Tämä Suunnitelma Yhdessä Alexanderin Kanssa</h3>
+            <p>Tämä landing page on alustava ehdotuksemme. Nyt tarvitsemme teidän näkemyksenne, jotta saamme koulutuksen täydelliseksi juuri Verkkokauppa.comille.</p>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 12px; margin: 20px 0;">
+                <h4 style="color: white; margin-top: 0;">Mitä puhelussa sovitaan:</h4>
+                <div style="text-align: left; color: white;">
+                    <p><strong>✓ Käymme läpi tämän suunnitelman kohta kohdalta</strong><br>
+                    "Onko aamupäivän ohjelma OK? Entä haluatteko enemmän markkinointiin vai asiakaspalveluun fokusta?"</p>
+                    
+                    <p><strong>✓ Räätälöimme sisällön teidän tarpeisiinne</strong><br>
+                    "Mainitsitte 'Käyttäjät löytävät sopivat tuotteet' - lisätään tuotehaun AI-optimointi koulutukseen."</p>
+                    
+                    <p><strong>✓ Sovimme käytännön asiat</strong><br>
+                    • Milloin koko henkilöstö pääsee parhaiten? (vko 12? 13?)<br>
+                    • Vahvistamme toteutuksen Zoomilla ja sovimme yksityiskohdat.<br>
+                    • Jaetaanko ryhmä kahteen päivään?<br>
+                    • Mitä ennakkotehtäviä annetaan?</p>
+                    
+                    <p><strong>✓ Lukitaan hinta ja aikataulu</strong><br>
+                    "2300€ / kk budjetti sopii hyvin. Voimme aloittaa 14.3. Jos varaat nyt, saat bonuksena..."</p>
+                    
+                    <p><strong>✓ Vastaamme kaikkiin kysymyksiinne</strong><br>
+                    Teknisistä yksityiskohdista toteutukseen - kaikki selväksi ennen päätöstä.</p>
+                </div>
+            </div>
+            
+            <a href="https://calendly.com/alexander-ai-systeemit/ai-koulutus-konsultaatio" class="alexander-button">
+                ✅ VIIMEISTELE SUUNNITELMA ALEXANDERIN KANSSA
+            </a>
+            <p style="font-size: 16px; margin-top: 15px; opacity: 0.9;">
+                "Tämä on teidän koulutuksenne. Rakennetaan siitä yhdessä juuri sellainen kuin haluatte."<br>
+                <em>- Alexander</em>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Koulutuspäivä Minuutti Minuutilta - Näin Se Oikeasti Menee</h2>
+            
+            <div style="background: linear-gradient(to right, #f0f7ff, #e6f0ff); padding: 30px; border-radius: 12px; margin: 20px 0;">
+                <h3 style="margin-top: 0;">🌅 Aamupäivä (9:00-12:00): "Vau, AI Osaa Tämänkin!"</h3>
+                <p><strong>Aloitamme yhdessä.</strong> Alexander näyttää ruudultaan, miten hän kirjoittaa ChatGPT:lle: "Analysoi Verkkokauppa.comin 10 kilpailijan hinnoittelu." 30 sekunnissa valmis analyysi. Osallistujien reaktio: "Mitä?! Tähän menee meillä viikko!"</p>
+                
+                <p><strong>Sitten sinun vuorosi:</strong><br>
+                • Avaat ChatGPT:n omalla koneellasi (me autamme!)<br>
+                • Kokeilet ensimmäisen promptin: "Kirjoita asiakaspalveluvastaus vihaselle asiakkaalle"<br>
+                • Huomaat: AI osaa kirjoittaa empaattisesti, ammattimaisesti, nopeasti<br>
+                • 15 minuutissa olet luonut 20 valmista vastauspohjaa</p>
+                
+                <p><strong>Breakout-huoneissa (20 hlö/ryhmä):</strong> Harjoittelet kollegan kanssa. "Hei, katso mitä sain aikaan!" Jaatte vinkkejä. Oppiminen on hauskaa, kun ei ole yksin.</p>
+            </div>
+
+            <div style="background: linear-gradient(to right, #e6ffe6, #f0f7ff); padding: 30px; border-radius: 12px; margin: 20px 0;">
+                <h3 style="margin-top: 0;">☀️ Keskipäivä (13:00-15:00): "Rakennetaan Jotain Oikeaa!"</h3>
+                <p><strong>Lounaalta palattuasi:</strong> Alexander kysyy: "Mikä on suurin aikasyöppönne?" Vastauksia sataa: tuotekuvaukset, raportit, asiakasviestit...</p>
+                
+                <p><strong>Valitaan yksi ongelma. Ratkaistaan se yhdessä:</strong><br>
+                Esimerkki: "Tuotekuvausten kirjoittaminen"<br>
+                1. Näytämme, miten AI analysoi kilpailijoiden parhaat kuvaukset<br>
+                2. Luomme Verkkokauppa.comin tyyliin sopivan "kuvauskoneen"<br>
+                3. Syötät tuotteen perustiedot → AI kirjoittaa myyvän kuvauksen<br>
+                4. Säästö: 30 min → 3 min per tuote = 1000 tuntia vuodessa!</p>
+                
+                <p><strong>Pienryhmätyö:</strong> Jokainen tiimi ratkaisee oman haasteensa. Markkinointi automatisoi Instagram-postaukset. Asiakaspalvelu rakentaa FAQ-botin. Kaikki esittelevät → 10+ valmista ratkaisua!</p>
+            </div>
+
+            <div style="background: linear-gradient(to right, #f9f0ff, #f0f7ff); padding: 30px; border-radius: 12px; margin: 20px 0;">
+                <h3 style="margin-top: 0;">🌆 Iltapäivä (15:00-17:00): "Miten Tämä Toimii Meillä?"</h3>
+                <p><strong>Nyt mennään syvemmälle:</strong><br>
+                • Miten yhdistän tämän CRM-järjestelmäämme?<br>
+                • Voiko AI lukea meidän tuotetietokantaa?<br>
+                • Miten varmistan, että vastaukset ovat brändin mukaisia?</p>
+                
+                <p><strong>Alexander & tiimi vastaavat kaikkeen.</strong> Näytämme konkreettiset integraatiot. Ei teknistä jargonia - selkeää suomea. "Klikkaa tästä, kopioi tähän, valmis."</p>
+                
+                <p><strong>Lopuksi - Henkilökohtainen toimintasuunnitelma:</strong><br>
+                • Viikko 1: Aloita näillä 3 työkalulla<br>
+                • Viikko 2-4: Automatisoi ensimmäinen prosessi<br>
+                • Kuukausi 2-3: Skaalaa koko tiimille<br>
+                → Jokainen tietää tarkalleen, mitä tehdä huomenna töissä!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Verkkokauppa.comin Potentiaali: Ennen vs. Jälkeen</h2>
+            <div class="transformation-story">
+                <h4>Nykytilanne (Arvio):</h4>
+                <p>• Koko henkilöstö käsittelee kyselyjä manuaalisesti<br>
+                • Tuotesuositukset perustuvat kategorioihin, ei dataan<br>
+                • Markkinointikampanjat vievät viikkoja suunnitella<br>
+                • Henkilöstö kokee rutiinitehtävät kuormittavina</p>
+                
+                <h4 style="margin-top: 25px;">Visio: 3 Kuukautta AI-Koulutuksen Jälkeen</h4>
+                <p>• AI-työkalut hoitavat 80% rutiinikyselyistä<br>
+                • Jokainen asiakas saa personoidut suositukset<br>
+                • Markkinointikampanja syntyy 2 tunnissa<br>
+                • Tiimi keskittyy strategiseen kehitykseen<br>
+                <strong style="color: #006600;">→ Tavoitteet: Henkilöstön osaamisen parantaminen tekoälyn käytössä, turvallisesti ja kannattavasti</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tämä Maksaa Itsensä Takaisin 14 Päivässä</h2>
+            <div class="price-reveal">
+                <div class="price-box">
+                    <span class="price-amount">2300€</span>
+                    <span class="price-period">per kuukausi (AI-kuukausisopimus)</span>
+                    <p class="price-note">Investointi jatkuvaan kehitykseen ja osaamisen parantamiseen.</p>
+                </div>
+            </div>
+            
+            <div class="future-vision">
+                <h3>ROI-Laskelma Verkkokauppa.comille:</h3>
+                <p><strong>Säästöt ensimmäisessä kuukaudessa:</strong></p>
+                <ul>
+                    <li>Asiakaspalvelu: -40 työtuntia/viikko = 6400€/kk</li>
+                    <li>Markkinointi: -30 työtuntia/viikko = 4800€/kk</li>
+                    <li>Raportointi: -20 työtuntia/viikko = 3200€/kk</li>
+                </ul>
+                <p style="font-size: 24px; color: #006600; font-weight: bold; text-align: center; margin-top: 20px;">
+                    Yhteensä: 14 400€/kk säästöt<br>
+                    = 626% ROI ensimmäisessä kuukaudessa
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Miksi Juuri Me?</h2>
+            <div class="testimonial-slider">
+                <p class="testimonial-quote">"AI-Systeemit ei vain kouluta - he transformoivat. Meidän tiimi on nyt 5 vuotta edellä kilpailijoita. Asiakkaat ihmettelevät, miten palvelemme heitä niin hyvin ja nopeasti."</p>
+                <p class="testimonial-author">- Sanna Virtanen, CDO, Suomen Suurin Verkkokauppa</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Valintanne On Yksinkertainen</h2>
+            <p style="font-size: 18px; text-align: center;">
+                <strong>Vaihtoehto A:</strong> Jatkatte kuten ennenkin. Kilpailijat ottavat AI:n käyttöön. Menetätte markkinaosuutta.<br><br>
+                <strong>Vaihtoehto B:</strong> Tarttutte tilaisuuteen NYT. 30 päivän päästä tiimillänne on supervoimat.
+            </p>
+            
+            <a href="https://calendly.com/alexander-ai-systeemit/ai-koulutus-konsultaatio" class="cta-button">
+                HALUAN OPTION B - VARAA AIKA ALEXANDERILLE
+            </a>
+        </div>
+
+        <div class="section" style="background-color: #f0f7ff; padding: 30px; border-radius: 12px; margin: 40px -20px;">
+            <h2 style="text-align: center;">Tämä On Vasta Alku</h2>
+            <p style="text-align: center; font-size: 18px;">
+                Kun varaat ajan Alexanderin kanssa, hän:<br><br>
+                ✓ Analysoi Verkkokauppa.comin erityistarpeet<br>
+                ✓ Räätälöi koulutuksen juuri teille<br>
+                ✓ Näyttää konkreettisia esimerkkejä alaltanne<br>
+                ✓ Sopii aikataulun, joka toimii koko henkilöstölle<br>
+                ✓ Antaa ILMAISEN AI-työkaluoppaan (arvo 299€)
+            </p>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://calendly.com/alexander-ai-systeemit/ai-koulutus-konsultaatio" style="display: inline-block; background: linear-gradient(135deg, #9c27b0, #7b1fa2); color: white; padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 20px; box-shadow: 0 5px 15px rgba(156,39,176,0.4); transition: all 0.3s;">
+                    🚀 KYLLÄ, HALUAN PUHUA ALEXANDERIN KANSSA
+                </a>
+                <p style="margin-top: 15px; color: #666;">
+                    <a href="tel:0407780742" style="color: #0066cc; font-weight: bold;">Tai soita suoraan: 040 778 0742</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <p style="text-align: center; font-style: italic; color: #666;">
+                P.S. Kilpailijanne eivät odota. Jokainen päivä ilman AI:ta on päivä, jolloin jäätte jälkeen. Alexander voi ottaa vain 3 uutta asiakasta tässä kuussa. Varaa paikkanne nyt.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 AI-SYSTEEMIT Oy. Kaikki oikeudet pidätetään.</p>
+        <p>Y-tunnus: 2871156-8 | Leikosaarentie 27, 00990 Helsinki</p>
+        <p><a href="#">Tietosuojaseloste</a> | <a href="#">Käyttöehdot</a></p>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth animations on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '0';
+                entry.target.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    entry.target.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, 100);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all major elements
+    document.querySelectorAll('.benefit-card, .day-in-life, .transformation-story, .highlight-stat').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Counter animation for stats
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.floor(current) + '%';
+        }, 30);
+    }
+
+    // Trigger counter when in view
+    const statObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumber = entry.target.querySelector('.stat-number');
+                if (statNumber && statNumber.textContent.includes('%')) {
+                    const target = parseInt(statNumber.textContent);
+                    animateCounter(statNumber, target);
+                }
+                statObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.highlight-stat').forEach(el => {
+        statObserver.observe(el);
+    });
+});
+</script>
+</body>
+</html>
