@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finnair: AI-Transformaatio Alkakoon | Räätälöity AI-Kuukausisopimus</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* Hero Section with Animation */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0066cc, #004b96, #001f3d);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 10;
+    max-width: 900px;
+    padding: 0 20px;
+    animation: heroFadeIn 2s ease-out;
+}
+
+@keyframes heroFadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.company-logo-text {
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+    100% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.4); }
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffc107;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffc107, #ff8f00);
+    color: #333;
+    padding: 20px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-cta:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.6);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content {
+    padding: 60px 40px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: #005cb9;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #0066cc, #ffc107);
+    border-radius: 2px;
+}
+
+.intro-section {
+    text-align: center;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    color: #555;
+}
+
+/* Learning Areas Gallery */
+.learning-gallery {
+    margin: 80px 0;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f8f9ff, #e6f0ff);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 50px rgba(0, 102, 204, 0.1);
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-title {
+    font-size: 32px;
+    color: #004b96;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.gallery-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.learning-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+    border-left: 5px solid #0066cc;
+    display: none;
+    animation: slideIn 0.8s ease-out;
+}
+
+.learning-card.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.card-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066cc, #004b96);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 26px;
+    color: #004b96;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.card-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.card-benefits li {
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #333;
+    font-weight: 500;
+}
+
+.card-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gallery-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.nav-button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button:hover {
+    background: #004b96;
+    transform: scale(1.1);
+}
+
+.nav-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.gallery-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #0066cc;
+    transform: scale(1.3);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #e6f0ff, #f0f7ff);
+    border-left: 5px solid #0066cc;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,102,204,0.1);
+}
+
+.highlight-box h4 {
+    color: #004b96;
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.problem-solution-box {
+    background: linear-gradient(135deg, #fff9e6, #fffbf0);
+    border-left: 5px solid #ffc107;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.1);
+}
+
+.problem-solution-box .solution {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #ffc107;
+    color: #2c5d2c;
+    font-weight: 600;
+}
+
+.price-section {
+    background: linear-gradient(135deg, #f8f9ff, #e6f0ff);
+    padding: 60px 40px;
+    margin: 60px -40px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.price-box {
+    background: white;
+    border: 3px solid #0066cc;
+    border-radius: 20px;
+    padding: 40px;
+    display: inline-block;
+    box-shadow: 0 15px 40px rgba(0,102,204,0.15);
+    max-width: 500px;
+}
+
+.price-amount {
+    font-size: 56px;
+    font-weight: bold;
+    color: #0066cc;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.price-period {
+    font-size: 20px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.price-note {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.investment-benefit {
+    background: #f0f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+.final-cta-section {
+    background: linear-gradient(135deg, #004b96, #001f3d);
+    color: white;
+    padding: 80px 40px;
+    margin: 60px -40px -1px -40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.3;
+}
+
+.final-cta-section h2 {
+    color: white;
+    border-bottom: none;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.final-cta-section h2::after {
+    background: linear-gradient(135deg, #ffc107, #ff8f00);
+}
+
+.final-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffc107, #ff8f00);
+    color: #333;
+    padding: 25px 60px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.final-cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.6);
+}
+
+.testimonial-section {
+    background: #f0f7ff;
+    padding: 60px 40px;
+    margin: 60px -40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.testimonial-quote {
+    font-size: 24px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    font-size: 14px;
+}
+
+.ps-text {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 22px; }
+    .hero-description { font-size: 16px; }
+    .content { padding: 40px 20px; }
+    .gallery-container { padding: 20px; }
+    .card-title { font-size: 22px; }
+    .price-amount { font-size: 42px; }
+    .final-cta-button { padding: 20px 40px; font-size: 18px; }
+}
+</style>
+</head>
+
+<body>
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+        <div class="company-logo-text">AI-SYSTEEMIT</div>
+        <h1 class="hero-title">Kuvittele Finnair, Jossa Jokainen Työntekijä On AI-Supervoimainen</h1>
+        <p class="hero-subtitle">Tämä ei ole sci-fiä. Tämä on teidän todellisuutenne 30 päivän päästä.</p>
+        <p class="hero-description">Räätälöity AI-kuukausisopimus, joka vapauttaa henkilöstönne potentiaalin, tehostaa prosesseja ja nostaa asiakaspalvelun uudelle tasolle – turvallisesti ja kannattavasti.</p>
+        <a href="#oppimisalueet" class="hero-cta">🚀 Näytä Minulle Miten</a>
+    </div>
+    <div class="scroll-indicator">
+        <div style="font-size: 30px;">↓</div>
+        <div style="font-size: 12px; margin-top: 5px;">Selaa alas</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <div class="section">
+            <div class="intro-section">
+                <p style="font-size: 24px; font-weight: 600; color: #0066cc; margin-bottom: 30px;">Hyvä Finnairin Tiimi,</p>
+                <p>Kuvitelkaa tulevaisuus, jossa rutiinitehtävät hoituvat automaattisesti, asiakkaanne saavat entistäkin henkilökohtaisempaa palvelua ja henkilöstönne voi keskittyy siihen, missä he ovat parhaita. Tämä tulevaisuus on lähempänä kuin uskottekaan.</p>
+                <p>Tiedämme, että teillä on paljon tehtäviä ja tavoitteena on optimoida kustannuksia. Juuri siksi olemme laatineet tämän <strong>räätälöidyn AI-kuukausisopimuksen</strong> – ei vain yleistä höpinää, vaan konkreettisia askelia kohti tehokkaampaa ja tuottavampaa Finnairia.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h4>Miksi tämä on teille elintärkeää juuri nyt?</h4>
+            <p>Tekoäly ei ole enää tulevaisuutta – se on nykypäivän kilpailuetu. Yritykset, jotka omaksuvat AI:n fiksusti, eivät ainoastaan selviydy, vaan kukoistavat. Tämä kuukausisopimus on avaimenne siihen, että koko henkilöstönne ymmärtää ja osaa hyödyntää AI:ta työssään – turvallisesti ja tuloksellisesti.</p>
+        </div>
+
+        <div class="section">
+            <div class="problem-solution-box">
+                <p><strong>Tunnistettu haaste Finnairilla:</strong> "Tehtäviä on paljon, ja resurssit ovat rajalliset. Miten voimme tehostaa toimintaamme ja samalla parantaa asiakaspalvelua ilman valtavia lisäkustannuksia?"</p>
+                <div class="solution">
+                    💡 <strong>AI-ratkaisu:</strong> Opettamalla henkilöstönne hyödyntämään AI-työkaluja voimme automatisoida aikaa vieviä rutiineja, vapauttaa asiantuntijoiden aikaa arvokkaampiin tehtäviin ja tarjota asiakkaille nopeampaa ja personoidumpaa palvelua. Tämä johtaa suoraan kustannussäästöihin ja parempaan asiakastyytyväisyyteen.
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-gallery" id="oppimisalueet">
+            <div class="gallery-container">
+                <div class="gallery-header">
+                    <h2 class="gallery-title">7 AI-Työkalua Joita Henkilöstönne Oppii Käyttämään Mestarillisesti</h2>
+                    <p class="gallery-subtitle">Konkreettisia työkaluja ja tekniikoita, jotka tekevät työntekijöistänne AI-supervoimaisia. Käytännön osaamista, joka tuo tuloksia heti.</p>
+                </div>
+
+                <div class="learning-card active" data-card="0">
+                    <div class="card-number">1</div>
+                    <h3 class="card-title">ChatGPT & Claude - Sisällöntuotannon Supervoimat</h3>
+                    <p class="card-description">Henkilöstönne oppii luomaan 10x nopeammin laadukkaita palvelukuvauksia ja matkakohteiden esittelyjä, sähköpostejä, blogeja ja markkinointisisältöjä. Mitä maksaisi 50 copywriteria? Nyt yksi työntekijä hoitaa saman työn tunnissa.</p>
+                    <ul class="card-benefits">
+                        <li><strong>Palvelukuvaukset ja matkakohteiden esittelyt:</strong> 1000 kuvausta tunnissa vs. 10 päivässä</li>
+                        <li><strong>Asiakassähköpostit:</strong> Personoidut vastaukset 90% nopeammin</li>
+                        <li><strong>Markkinointisisältö:</strong> Kampanjatekstit ja mainokset minuuteissa</li>
+                        <li><strong>Käännökset:</strong> Monikielisiä sisältöjä välittömästi</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card" data-card="1">
+                    <div class="card-number">2</div>
+                    <h3 class="card-title">Midjourney & DALL-E - Visuaalisen Sisällön Tehdas</h3>
+                    <p class="card-description">Loppu kalliilta valokuvauksilta ja stock-kuveilta! Henkilöstönne luo ammattitasoisia markkinointikuvia, mainoskuvia ja sosiaalisen median grafiikkaa hetkessä. Säästö: tuhansia euroja kuukaudessa.</p>
+                    <ul class="card-benefits">
+                        <li><strong>Markkinointikuvat ja kohde-esittelyt:</strong> Luovat kuvat ilman valokuvausta</li>
+                        <li><strong>Mainosgrafiikka:</strong> Kampanjakuvat 100x edullisemmin</li>
+                        <li><strong>Sosiaalinen media:</strong> Päivittäinen sisältö automaattisesti</li>
+                        <li><strong>Brändäys:</strong> Yhtenäinen visuaalinen ilme kaikille materiaaleille</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card" data-card="2">
+                    <div class="card-number">3</div>
+                    <h3 class="card-title">Zapier & Make - Automaation Mahtimestarit</h3>
+                    <p class="card-description">Yhdistäkää kaikki järjestelmänne älykkäästi! Kun asiakas tekee varauksen, AI lähettää vahvistussähköpostin, päivittää CRM:n, lisää asiakkaan uutiskirjelistalle ja luo henkilökohtaisen tarjouksen. Kaikki automaattisesti.</p>
+                    <ul class="card-benefits">
+                        <li><strong>Varaustenhoito:</strong> Täysin automaattinen prosessi alusta loppuun</li>
+                        <li><strong>Asiakashallinta:</strong> CRM päivittyy ja segmentoi itsestään</li>
+                        <li><strong>Markkinointi:</strong> Automaattiset seuranta-sähköpostit ja kampanjat</li>
+                        <li><strong>Raportointi:</strong> Reaaliaikaiset dashboardit ilman käsityötä</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card" data-card="3">
+                    <div class="card-number">4</div>
+                    <h3 class="card-title">Jasper & Copy.ai - Markkinoinnin AI-Koneet</h3>
+                    <p class="card-description">Henkilöstönne oppii luomaan myyvää tekstiä kuin maailman parhaat copywriterit. Nämä työkalut analysoivat mikä toimii ja luovat konvertoivaa sisältöä joka teksteille, sähköposteille ja mainoksille.</p>
+                    <ul class="card-benefits">
+                        <li><strong>Myyntisivut:</strong> Konvertoivat palvelu- ja kampanjasivut optimoiduilla otsikoilla</li>
+                        <li><strong>Email-kampanjat:</strong> Henkilökohtaiset viestit jokaiselle segmentille</li>
+                        <li><strong>Google Ads:</strong> Mainokset jotka saavat klikkauksia ja varauksia</li>
+                        <li><strong>A/B-testit:</strong> Useita versioita testattavaksi automaattisesti</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card" data-card="4">
+                    <div class="card-number">5</div>
+                    <h3 class="card-title">Tableau AI & Power BI Copilot - Datan Supervoimat</h3>
+                    <p class="card-description">Muuttakaa kaikki myyntidatanne, asiakastietonne ja operatiiviset tiedot visuaalisiksi raporteiksi jotka kertovat mitä tehdä. Ei enää Excel-helvettiä - vain selkeitä vastauksia kysymyksiin "Mitkä reitit myyvät parhaiten?" ja "Kuka asiakas on vaarassa lähteä?"</p>
+                    <ul class="card-benefits">
+                        <li><strong>Myyntianalytiikka:</strong> Reaaliaikaiset trendit ja ennusteet</li>
+                        <li><strong>Asiakasanalytiikka:</strong> Ketkä ovat parhaita asiakkaita ja miksi</li>
+                        <li><strong>Operatiivinen analytiikka:</strong> Resurssien käytön optimointi ja ennustaminen</li>
+                        <li><strong>Kannattavuus:</strong> Mitkä reitit, palvelut ja asiakassegmentit tuottavat eniten</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card" data-card="5">
+                    <div class="card-number">6</div>
+                    <h3 class="card-title">Intercom AI & Zendesk AI - Asiakaspalvelun Tehoraketti</h3>
+                    <p class="card-description">Asiakaspalvelunne muuttuu 24/7 supervoimaksi! AI hoitaa 80% kysymyksistä automaattisesti, henkilökunta keskittyy monimutkaisiin tapauksiin. Asiakastyytyväisyys nousee, kustannukset laskevat.</p>
+                    <ul class="card-benefits">
+                        <li><strong>Chatbotit:</strong> Älykkäät robotit hoitavat peruskyselyt välittömästi</li>
+                        <li><strong>Sähköpostiautomaatio:</strong> Nopeat ja personoidut vastaukset</li>
+                        <li><strong>Tikettien priorisointi:</strong> Tärkeimmät asiat käsittelyyn ensin</li>
+                        <li><strong>Asiakastyytyväisyys:</strong> Proaktiivinen asiakaspalvelu ongelmien ennaltaehkäisy</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card" data-card="6">
+                    <div class="card-number">7</div>
+                    <h3 class="card-title">Notion AI & ClickUp AI - Projektinhallinnan Huippuluokka</h3>
+                    <p class="card-description">Ei enää kadonneita tehtäviä tai myöhässä olevia projekteja! Henkilöstönne oppii käyttämään AI:ta joka organisoi työt, luo aikataulut, muistuttaa deadlineista ja analysoi työn tehokkuutta. Produktiivisuus räjähtää kattoon!</p>
+                    <ul class="card-benefits">
+                        <li><strong>Projektinsuunnittelu:</strong> AI luo realistiset aikataulut ja resurssit</li>
+                        <li><strong>Tehtävien jako:</strong> Automaattinen työnjako taitojen mukaan</li>
+                        <li><strong>Edistymisen seuranta:</strong> Reaaliaikaiset raportit ja varoitukset</li>
+                        <li><strong>Tiedonhallinta:</strong> Kaikki projektitiedot järjestyksessä ja löydettävissä</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-navigation">
+                    <button class="nav-button" id="prevBtn">‹</button>
+                    <div class="gallery-dots" id="dots"></div>
+                    <button class="nav-button" id="nextBtn">›</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-section">
+            <h2 style="color: #004b96; font-size: 28px; margin-bottom: 30px;">Mitä Odottaa AI-Kuukausisopimukselta?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left;">
+                <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1); border-left: 4px solid #28a745;">
+                    <h4 style="color: #28a745; margin-top: 0; font-size: 18px;">✅ Ensimmäinen Kuukausi</h4>
+                    <p style="margin: 0; color: #333; font-size: 15px;">Henkilöstönne oppii käyttämään ChatGPT:tä, Midjourneya ja Zapier-automaatiota. Ensimmäiset prosessit automatisoituna ja sisällöntuotanto 5x nopeampaa.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1); border-left: 4px solid #0066cc;">
+                    <h4 style="color: #0066cc; margin-top: 0; font-size: 18px;">🚀 Kolmas Kuukausi</h4>
+                    <p style="margin: 0; color: #333; font-size: 15px;">Asiakaspalvelu 80% automaattista, markkinointisisältö tuotetaan minuuteissa ja data-analytiikka ohjaa päätöksiä. Henkilöstö on AI-supervoimaista.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1); border-left: 4px solid #ffc107;">
+                    <h4 style="color: #ff8f00; margin-top: 0; font-size: 18px;">💰 Kuudes Kuukausi</h4>
+                    <p style="margin: 0; color: #333; font-size: 15px;">Kustannussäästöt ja tehokkuushyödyt maksavat investoinnin takaisin moninkertaisesti. Kilpailijat ihmettelevät miten pystytte toimimaan näin tehokkaasti.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1); border-left: 4px solid #dc3545;">
+                    <h4 style="color: #dc3545; margin-top: 0; font-size: 18px;">🏆 Vuoden Päästä</h4>
+                    <p style="margin: 0; color: #333; font-size: 15px;">Finnair on alan AI-edelläkävijä. Henkilöstö kehittää omia AI-ratkaisuja, asiakastyytyväisyys huipussaan ja liikevaihto kasvanut merkittävästi ilman henkilöstön lisäystä.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: #666; font-size: 16px;">
+                <strong>Tämä ei ole lupaus vaan realistinen aikataulu,</strong> kun henkilöstönne oppii käyttämään oikeita AI-työkaluja oikein.
+            </p>
+        </div>
+
+        <div class="price-section">
+            <h2>Investointi Tulevaisuuteen – Selkeästi Kannattavaa</h2>
+            <p style="font-size: 18px; margin-bottom: 40px; color: #555;">Tiedämme, että budjetit ovat tiukkoja. Siksi olemme räätälöineet tämän tehokkaan AI-kuukausisopimuksen Finnairille hintaan, joka on suunniteltu tuottamaan itsensä takaisin moninkertaisesti.</p>
+            
+            <div class="price-box">
+                <div class="price-amount">2300€</div>
+                <div class="price-period">/ kuukausi</div>
+                <div class="price-note">Koko henkilöstön kattava AI-kuukausisopimus</div>
+                <div class="investment-benefit">
+                    <p><strong>Ajattele:</strong> Jos henkilöstönne säästää AI:n avulla merkittävästi aikaa päivittäisissä tehtävissä, se tarkoittaa tuhansia säästettyjä työtunteja vuodessa! Mitä kaikkea sillä ajalla voisittekaan saada aikaan?</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 16px; color: #666;">Kuukausisopimus sisältää jatkuvan oppimisen, uusimmat AI-työkalut, henkilökohtaisen tuen sekä säännölliset kehityskeskustelut tulostenne maksimoimiseksi.</p>
+        </div>
+
+        <div class="section">
+            <h2>Miksi Valita AI-Systeemit Kumppaniksi?</h2>
+            <p style="text-align: center; font-size: 18px; margin-bottom: 40px; color: #555;">Olemme erikoistuneet auttamaan suomalaisia yrityksiä valjastamaan tekoälyn voiman. Emme tarjoa geneerisiä ratkaisuja, vaan ymmärrämme liiketoimintaanne ja räätälöimme ratkaisut, jotka tuottavat todellisia tuloksia.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div style="text-align: center; padding: 30px; background: #f8f9ff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1);">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
+                    <h4 style="color: #004b96; margin-bottom: 15px;">Käytännönläheisyys</h4>
+                    <p>Ei teoriaa, vaan työkaluja ja taitoja heti käyttöön.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; background: #f8f9ff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1);">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🔧</div>
+                    <h4 style="color: #004b96; margin-bottom: 15px;">Räätälöinti</h4>
+                    <p>Ratkaisu suunnitellaan juuri teidän tarpeisiinne.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; background: #f8f9ff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1);">
+                    <div style="font-size: 48px; margin-bottom: 20px;">💡</div>
+                    <h4 style="color: #004b96; margin-bottom: 15px;">Kokemus</h4>
+                    <p>Vankka kokemus AI-projekteista ja transformaatioista.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; background: #f8f9ff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,102,204,0.1);">
+                    <div style="font-size: 48px; margin-bottom: 20px;">📈</div>
+                    <h4 style="color: #004b96; margin-bottom: 15px;">Tulokset</h4>
+                    <p>Tavoitteenamme on aina mitattava parannus tehokkuudessa.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="final-cta-section">
+            <h2>Oletteko Valmiita Ottamaan Seuraavan Askeleen?</h2>
+            <p style="font-size: 20px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Tämä AI-kuukausisopimus on lähtölaukaus Finnairin transformaatiolle. Nyt on aika keskustella siitä, miten voimme yhdessä varmistaa, että saatte tästä kaiken irti.</p>
+            
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; margin: 30px auto; max-width: 600px; border: 1px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 18px; margin-bottom: 20px;"><strong>Varaamalla maksuttoman konsultaatioajan Alexanderin kanssa:</strong></p>
+                <ul style="text-align: left; list-style: none; padding: 0; font-size: 16px;">
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #ffc107; font-size: 18px;">✓</span>
+                        <strong>Käymme läpi tämän suunnitelman yksityiskohdat</strong> ja vastaamme kaikkiin kysymyksiinne.
+                    </li>
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #ffc107; font-size: 18px;">✓</span>
+                        <strong>Räätälöimme sisällön ja aikataulun</strong> täydellisesti Finnairin tarpeisiin sopivaksi.
+                    </li>
+                    <li style="padding: 8px 0; padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #ffc107; font-size: 18px;">✓</span>
+                        <strong>Varmistamme, että AI-investointi on teille maksimaalisen kannattava.</strong>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="https://ai-systeemit.fi/ai-training-consultation" class="final-cta-button">
+                🚀 Kyllä, Varaan Konsultaation Alexanderin Kanssa!
+            </a>
+            
+            <p style="font-size: 16px; margin-top: 25px; opacity: 0.9;">
+                Tai ota suoraan yhteyttä: Alexander, AI-Systeemit<br>
+                <a href="tel:0407780742" style="color: #ffc107; font-weight: bold;">Puh: 040 778 0742</a> | 
+                <a href="mailto:alexander@ai-systeemit.fi" style="color: #ffc107; font-weight: bold;">alexander@ai-systeemit.fi</a>
+            </p>
+        </div>
+
+        <div class="ps-text">
+            <p><strong>P.S.</strong> Kilpailijanne eivät nuku. Jokainen päivä ilman selkeää AI-strategiaa ja -osaamista on menetys. Alexanderilla on kalenterissaan tilaa vain muutamalle uudelle strategiakumppanille tässä kuussa. Varmista paikkasi eturivissä.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 AI-SYSTEEMIT Oy. Kaikki oikeudet pidätetään.</p>
+        <p>Y-tunnus: 2871156-8 | Leikosaarentie 27, 00990 Helsinki</p>
+        <p>Tämä AI-kuukausisopimus on laadittu luottamuksellisesti Finnairille.</p>
+    </div>
+</div>
+
+<script>
+// Particle animation for hero section
+document.addEventListener('DOMContentLoaded', function() {
+    // Create particles
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        particlesContainer.appendChild(particle);
+    }
+
+    // Gallery functionality
+    const cards = document.querySelectorAll('.learning-card');
+    const dotsContainer = document.getElementById('dots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentCard = 0;
+
+    // Create dots
+    cards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => showCard(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function showCard(index) {
+        // Hide all cards
+        cards.forEach(card => card.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Show selected card
+        cards[index].classList.add('active');
+        dots[index].classList.add('active');
+        
+        currentCard = index;
+        
+        // Update navigation buttons
+        prevBtn.disabled = currentCard === 0;
+        nextBtn.disabled = currentCard === cards.length - 1;
+    }
+
+    // Navigation buttons
+    prevBtn.addEventListener('click', () => {
+        if (currentCard > 0) {
+            showCard(currentCard - 1);
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentCard < cards.length - 1) {
+            showCard(currentCard + 1);
+        }
+    });
+
+    // Initialize
+    showCard(0);
+
+    // NOTE: Auto-advance functionality removed as requested
+    // Gallery now only moves when user clicks navigation buttons or dots
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#') && href.length > 1) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections for scroll animations
+    document.querySelectorAll('.section, .highlight-box, .problem-solution-box').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+    });
+});
+</script>
+</body>
+</html>
