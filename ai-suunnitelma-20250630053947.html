@@ -1,0 +1,1108 @@
+```html
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pelastusarmeijan Henkilöstöä Voimaannuttava AI-koulutusohjelma | AI-SYSTEEMIT</title>
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.7;
+color: #333333;
+margin: 0;
+padding: 0;
+background-color: #f8f9fa;
+}
+.container {
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+background-color: #ffffff;
+padding: 0;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.header {
+text-align: center;
+padding: 35px 20px;
+background: linear-gradient(135deg, #0066cc, #004b96);
+color: white;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+.content {
+padding: 25px 20px;
+}
+.section {
+margin-bottom: 35px;
+}
+h1 {
+color: #ffffff;
+margin: 0 0 10px 0;
+font-size: 28px;
+line-height: 1.3;
+font-weight: 700;
+}
+h2 {
+color: #005cb9;
+font-size: 24px;
+margin-top: 30px;
+margin-bottom: 20px;
+border-bottom: 3px solid #e6f0ff;
+padding-bottom: 10px;
+font-weight: 600;
+}
+h3 {
+color: #004b96;
+font-size: 20px;
+margin-top: 25px;
+margin-bottom: 15px;
+font-weight: 600;
+}
+p {
+margin-bottom: 18px;
+font-size: 16px;
+}
+ul {
+padding-left: 25px;
+}
+li {
+margin-bottom: 12px;
+position: relative;
+}
+.subtitle {
+font-size: 18px;
+color: #ffffff;
+opacity: 0.95;
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+max-width: 600px;
+}
+.company-logo {
+margin-bottom: 20px;
+}
+.company-logo img {
+max-height: 60px;
+width: auto;
+}
+.company-logo-text {
+font-size: 20px;
+background: #fff;
+color: #0066cc;
+display: inline-block;
+padding: 10px 18px;
+border-radius: 6px;
+font-weight: bold;
+}
+
+    /* Training Module Carousel Styles */
+    .module-carousel {
+        position: relative;
+        margin: 30px 0;
+        overflow: hidden;
+    }
+    .module-carousel-inner {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+    }
+    .module-box {
+        background-color: #f0f7ff;
+        border-left: 5px solid #0066cc;
+        border-radius: 8px;
+        padding: 25px;
+        margin: 0 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        flex: 0 0 calc(100% - 16px);
+        min-width: calc(100% - 16px);
+        box-sizing: border-box;
+    }
+    .carousel-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .carousel-dots {
+        display: flex;
+        gap: 8px;
+    }
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .carousel-dot.active {
+        background-color: #0066cc;
+    }
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 102, 204, 0.8);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0.8;
+        z-index: 2;
+        transition: opacity 0.3s, background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carousel-btn:hover {
+        opacity: 1;
+        background-color: #005cb9;
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+
+    .module-icon {
+        font-weight: bold;
+        color: #0066cc;
+        margin-bottom: 12px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .emoji-icon {
+        margin-right: 12px;
+        font-size: 28px;
+        display: inline-block;
+    }
+    .module-topics { margin-top: 15px; }
+    .topic-item {
+        display: flex;
+        margin-bottom: 12px;
+        align-items: flex-start;
+    }
+    .topic-icon {
+        width: 22px;
+        text-align: center;
+        margin-right: 12px;
+        color: #0066cc;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 2px;
+    }
+    .benefit {
+        color: #006600;
+        font-weight: bold;
+        margin-top: 18px;
+        padding: 10px 15px;
+        background-color: #e6f5e6;
+        border-radius: 6px;
+        display: inline-block;
+        border-left: 4px solid #008000;
+    }
+    .highlight-box {
+        background-color: #e6f7ff;
+        border-left: 5px solid #007bff;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    .highlight-box ul li::before {
+        content: "✓";
+        position: absolute;
+        left: -20px;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .testimonial {
+        font-style: italic;
+        background-color: #f9f9f9;
+        padding: 25px;
+        padding-left: 40px;
+        border-radius: 8px;
+        margin: 30px 0;
+        position: relative;
+        border-left: 5px solid #0066cc;
+    }
+    .testimonial::before {
+        content: '"';
+        font-size: 80px;
+        color: #0066cc;
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        opacity: 0.15;
+        font-family: Georgia, serif;
+    }
+    .testimonial-author {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #555;
+        text-align: right;
+        font-style: normal;
+    }
+    .testimonial-author img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .roi-box {
+        background-color: #e6ffe6;
+        border-left: 5px solid #006600;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    .roi-box strong { color: #004d00; }
+
+    .special-offer {
+        background: linear-gradient(to bottom, #f9f0ff, #f0f7ff);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 30px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    .special-offer::before {
+        content: "RÄÄTÄLÖITY";
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: #9c27b0;
+        color: white;
+        padding: 5px 35px;
+        font-size: 13px;
+        transform: rotate(45deg);
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .price {
+        font-size: 36px;
+        font-weight: bold;
+        color: #0066cc;
+        display: block;
+        margin: 15px 0 5px 0;
+        text-align: center;
+    }
+    .price-note {
+        font-size: 15px;
+        color: #e53935;
+        font-weight: bold;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .features-list {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .features-list li {
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .features-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #008000;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .bonus-highlight {
+        color: #9c27b0;
+        font-weight: 600;
+    }
+
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        font-size: 15px;
+    }
+    .comparison-table th {
+        background-color: #005cb9;
+        color: white;
+        text-align: center;
+        padding: 15px 10px;
+        font-weight: 600;
+    }
+    .comparison-table td {
+        border: 1px solid #e0e0e0;
+        padding: 12px 10px;
+        text-align: center;
+    }
+    .comparison-table tr:nth-child(even) td {
+        background-color: #f9f9f9;
+    }
+    .comparison-table tr:nth-child(odd) td {
+         background-color: #ffffff;
+    }
+    .comparison-table td:nth-child(3) { /* Desktop: Highlight 3rd column data */
+        font-weight: bold;
+        color: #006600;
+    }
+
+    /* Timeline Accordion */
+    .timeline-accordion { margin-top: 30px; }
+    .timeline-step {
+        margin-bottom: 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .timeline-header {
+        background-color: #f0f7ff;
+        padding: 15px 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.3s;
+    }
+    .timeline-header:hover { background-color: #e0f0ff; }
+    .timeline-number {
+        width: 35px;
+        height: 35px;
+        background: #0066cc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+    .timeline-title {
+        font-weight: bold;
+        flex-grow: 1;
+        color: #004b96;
+        font-size: 18px;
+    }
+    .timeline-arrow {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+    }
+    .timeline-arrow::before,
+    .timeline-arrow::after {
+        content: '';
+        position: absolute;
+        background-color: #0066cc;
+        width: 12px;
+        height: 2.5px;
+        top: 11px;
+    }
+    .timeline-arrow::before { left: 2px; transform: rotate(45deg); }
+    .timeline-arrow::after { right: 2px; transform: rotate(-45deg); }
+    .timeline-step.active .timeline-arrow { transform: rotate(180deg); }
+    .timeline-content {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        background-color: #fff;
+    }
+    .timeline-step.active .timeline-content {
+        padding: 20px;
+        max-height: 400px;
+    }
+    .timeline-content p:last-child { margin-bottom: 0; }
+
+    /* FAQ Section */
+    .faq-section { margin-top: 30px; }
+    .faq-item {
+        margin-bottom: 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .faq-question {
+        background-color: #f9f9f9;
+        padding: 15px 18px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: #333;
+    }
+    .faq-question:hover { background-color: #f0f0f0; }
+    .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        background-color: #fff;
+    }
+    .faq-item.active .faq-answer {
+        padding: 20px;
+        max-height: 300px;
+    }
+    .faq-arrow {
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    .faq-item.active .faq-arrow { transform: rotate(45deg); }
+
+    /* Why Us Section */
+    .why-us-section {
+        background-color: #f0f7ff;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+        border-top: 4px solid #0066cc;
+        border-bottom: 4px solid #0066cc;
+    }
+    .why-us-section ul { list-style-type: none; padding-left: 0; }
+    .why-us-section li {
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .why-us-section li::before {
+        content: "⭐";
+        position: absolute;
+        left: 0;
+        font-size: 20px;
+        color: #ffc107;
+    }
+
+    .cta-button {
+        display: block;
+        background: linear-gradient(135deg, #ff8f00, #ff6f00);
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 18px 25px;
+        border-radius: 50px;
+        margin: 30px auto;
+        font-weight: bold;
+        font-size: 18px;
+        width: auto;
+        min-width: 280px;
+        max-width: 320px;
+        box-shadow: 0 5px 15px rgba(255, 111, 0, 0.4);
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .cta-button:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(255, 111, 0, 0.5);
+        background: linear-gradient(135deg, #ff6f00, #ff8f00);
+    }
+    .cta-secondary {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #0066cc;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    .cta-secondary:hover {
+        color: #004b96;
+    }
+
+    .contact-section {
+        background-color: #f5f5f5;
+        padding: 25px;
+        border-radius: 8px;
+        margin-top: 30px;
+        border-left: 5px solid #0066cc;
+    }
+    .contact-section p { margin-bottom: 10px; }
+    .contact-section a { color: #0066cc; font-weight: bold; }
+
+    .footer {
+        text-align: center;
+        padding: 25px 15px;
+        color: #777;
+        border-top: 1px solid #e0e0e0;
+        background-color: #f0f0f0;
+        font-size: 14px;
+    }
+    .footer a { color: #0066cc; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    .module-name {
+        font-style: italic;
+        font-size: 14px;
+        color: #555;
+        margin-left: 5px;
+    }
+
+    /* Small mobile optimizations */
+    @media (max-width: 600px) {
+        .container { width: 100%; border-radius: 0; }
+        .header { padding: 25px 15px; border-radius: 0; }
+        h1 { font-size: 24px; }
+        h2 { font-size: 22px; }
+        .content { padding: 20px 15px; }
+        .carousel-btn { width: 35px; height: 35px; font-size: 18px; }
+        .carousel-btn.prev { left: 5px; }
+        .carousel-btn.next { right: 5px; }
+        .cta-button { width: 90%; padding: 15px 20px; font-size: 16px; }
+        .price { font-size: 30px; }
+        .special-offer::before { font-size: 11px; padding: 4px 30px; top: 15px; right: -40px;}
+        .timeline-title { font-size: 16px; }
+        .timeline-number { width: 30px; height: 30px; font-size: 14px; margin-right: 10px;}
+
+        /* Responsive Comparison Table Styles */
+        .comparison-table {
+            box-shadow: none; 
+            border-radius: 0; 
+        }
+        .comparison-table table,
+        .comparison-table thead,
+        .comparison-table tbody,
+        .comparison-table th,
+        .comparison-table td,
+        .comparison-table tr {
+            display: block; 
+        }
+
+        .comparison-table tr:first-child { /* This is the header row with <th> */
+            display: none; 
+        }
+
+        .comparison-table tr {
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            padding: 0; 
+        }
+        
+        .comparison-table tr:nth-child(even) td,
+        .comparison-table tr:nth-child(odd) td {
+            background-color: transparent;
+        }
+
+
+        .comparison-table td {
+            border: none;
+            border-bottom: 1px dotted #eee;
+            position: relative;
+            padding-left: 45%; 
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            text-align: right; 
+            min-height: 2.8em; 
+            line-height: 1.6;
+            font-size: 14px;
+            word-wrap: break-word; 
+        }
+
+        .comparison-table td:before {
+            position: absolute;
+            top: 50%; 
+            transform: translateY(-50%);
+            left: 10px; 
+            width: calc(45% - 20px); 
+            padding-right: 10px;
+            white-space: normal; 
+            text-align: left;
+            font-weight: bold;
+            color: #333;
+            font-size: 13px;
+        }
+
+        .comparison-table tr td:nth-of-type(1):before { content: "Osaamisalue:"; }
+        .comparison-table tr td:nth-of-type(2):before { content: "Ennen koulutusta:"; }
+        .comparison-table tr td:nth-of-type(3):before { content: "Koulutuspäivän jälkeen:"; }
+
+        .comparison-table td:last-child {
+            border-bottom: none; 
+        }
+        
+        .comparison-table td:nth-child(3) {
+            font-weight: normal; 
+            color: #333; 
+        }
+        
+        .comparison-table tr td:nth-of-type(3) strong, 
+        .comparison-table tr td:nth-of-type(3) { 
+            color: #006600; 
+            font-weight: bold;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="header">
+<div class="company-logo">
+<span class="company-logo-text">AI-SYSTEEMIT</span>
+</div>
+<h1>Pelastusarmeijan Räätälöity AI-koulutusohjelma</h1>
+<p class="subtitle">Voimaannuttakaa henkilöstönne tekoälyn avulla – tehostakaa avustustyötä ja lisätkää vaikuttavuutta käytännönläheisellä koulutuksella.</p>
+</div>
+
+    <div class="content">
+        <div class="section">
+            <p><strong>Hyvä Pelastusarmeijan johto ja henkilöstö,</strong></p>
+            <p>Tekoäly mullistaa tapaa, jolla järjestöt toimivat ja viestivät. Ne organisaatiot, jotka osaavat hyödyntää AI:n mahdollisuudet, pystyvät tehostamaan toimintaansa ja lisäämään vaikuttavuuttaan merkittävästi. Olemme suunnitelleet Pelastusarmeijalle <strong>täysin räätälöidyn AI-koulutusohjelman</strong>, joka antaa koko 5 hengen tiimillenne valmiudet hyödyntää tekoälyä tehokkaasti omassa työssään – auttaen teitä tavoittamaan ja aktivoimaan ihmisiä paremmin kuin koskaan ennen.</p>
+
+            <div class="highlight-box">
+                <h3 style="margin-top: 0; color: #007bff;">Miksi juuri nyt on oikea hetki?</h3>
+                <ul>
+                    <li>Avun tarve kasvaa – <strong>tekoäly auttaa moninkertaistamaan pienen tiimin vaikutuksen</strong></li>
+                    <li>Resurssien tehokas käyttö on elintärkeää – <strong>AI automatisoi rutiineja ja vapauttaa aikaa</strong></li>
+                    <li>Viestintä ja aktivointi ovat haastavia – <strong>AI tarjoaa uusia keinoja ihmisten tavoittamiseen</strong></li>
+                    <li>Oikein hyödynnettynä tekoäly voi <strong>nostaa tiiminne tuottavuuden uudelle tasolle</strong></li>
+                </ul>
+            </div>
+            <a href="#tarjous" class="cta-button" style="background: linear-gradient(135deg, #0066cc, #004b96); box-shadow: 0 5px 15px rgba(0,102,204,0.3);">Tutustu Pelastusarmeijan AI-ratkaisuihin</a>
+        </div>
+
+        <div class="section">
+            <h2>Tekoälyosaaminen – Pelastusarmeijan Uusi Voimavara</h2>
+            <p>Järjestötoiminta on resurssi-intensiivistä, jossa jokainen tavoitettu tukija ja autettu ihminen on onnistuminen. Tekoäly tarjoaa ennennäkemättömiä mahdollisuuksia tehostaa prosesseja, parantaa viestintää ja vapauttaa henkilöstön aikaa kaikkein tärkeimpään. <strong>Osaava henkilöstönne on avain näiden mahdollisuuksien hyödyntämiseen.</strong></p>
+
+            <div class="testimonial">
+                <p>"AI-koulutus ja työkalut ovat auttaneet meitä automatisoimaan rutiineja ja kohdentamaan viestintäämme tehokkaammin. Pystymme nyt pienellä tiimillä saavuttamaan enemmän ja vapauttamaan aikaa kaikkein tärkeimpään: ihmisten auttamiseen. Suosittelen AI-Systeemien käytännönläheistä otetta."</p>
+                <p class="testimonial-author">
+                    Anna Lahtinen<br>
+                    Toiminnanjohtaja, Apu Tänään ry
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Pelastusarmeijalle Räätälöity Koulutusohjelma</h2>
+            <p>Koulutuksemme on suunniteltu vastaamaan juuri Pelastusarmeijan tarpeita ja haasteita, kuten apua tarvitsevien suurta määrää ja aktivoinnin tarvetta. Jokainen moduuli sisältää käytännön harjoituksia todellisilla esimerkeillä järjestötyöstä:</p>
+
+            <div class="module-carousel">
+                <button class="carousel-btn prev"><</button>
+                <button class="carousel-btn next">></button>
+                <div class="module-carousel-inner">
+                    <div class="module-box">
+                        <div class="module-icon">
+                            <span class="emoji-icon">🚀</span> MODUULI 1: AI-PERUSTEET PELASTUSARMEIJALLE
+                        </div>
+                        <p>Luomme vankan pohjan tekoälyn ymmärtämiselle. Käymme läpi AI:n mahdollisuudet juuri järjestötoiminnan kontekstissa, purkaen myytit ja luoden realistisen kuvan hyödyistä.</p>
+                        <div class="module-topics">
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Tekoälyn peruskäsitteet selkokielellä – ChatGPT, Claude, Copilot ja muut työkalut</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Konkreettiset esimerkit: miten muut järjestöt tehostavat toimintaansa AI:lla</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Hands-on: jokainen luo ensimmäisen AI-avusteisen viestin vapaaehtoisten aktivointiin</div></div>
+                        </div>
+                        <p class="benefit">→ Koko henkilöstö ymmärtää AI:n potentiaalin ja on valmis hyödyntämään sitä.</p>
+                    </div>
+
+                    <div class="module-box">
+                        <div class="module-icon">
+                            <span class="emoji-icon">💬</span> MODUULI 2: AI VIESTINNÄSSÄ & SISÄLLÖNTUOTANNOSSA
+                        </div>
+                        <p>Opetamme, miten AI:ta käytetään tehokkaan ja vaikuttavan sisällön tuottamiseen. Keskitymme viestien, raporttien ja some-postausten luomiseen nopeasti.</p>
+                        <div class="module-topics">
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Nopeat vastauspohjat ja viestien personointi – säästäkää 70% kirjoitusajasta</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Vaikuttavien tarinoiden ja raporttien kirjoittaminen tukijoille ja medialle</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Sosiaalisen median sisällön ideointi ja tuottaminen ihmisten aktivoimiseksi</div></div>
+                        </div>
+                        <p class="benefit">→ Viestintä tehostuu, aktivointi paranee ja aikaa säästyy olennaiseen.</p>
+                    </div>
+
+                    <div class="module-box">
+                        <div class="module-icon">
+                            <span class="emoji-icon">📊</span> MODUULI 3: PROSESSIEN AUTOMATISOINTI
+                        </div>
+                        <p>Käymme läpi helppokäyttöisiä tapoja automatisoida toistuvia tehtäviä, jotta tiiminne voi keskittyä vähemmän manuaaliseen työhön ja enemmän ihmisten auttamiseen.</p>
+                        <div class="module-topics">
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Raporttien ja yhteenvetojen koostaminen automaattisesti</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Tapahtumien ja viestintäkampanjoiden suunnittelun nopeuttaminen</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Yksinkertaisten data-analyysien tekeminen (esim. palautteet, kyselyt)</div></div>
+                        </div>
+                        <p class="benefit">→ Rutiinityöhön kuluva aika vähenee jopa 50%, tuottavuus kasvaa.</p>
+                    </div>
+
+                    <div class="module-box">
+                        <div class="module-icon">
+                            <span class="emoji-icon">🎯</span> MODUULI 4: AI VARAINHANKINNASSA & AKTIVOINNISSA
+                        </div>
+                        <p>Keskitymme siihen, miten tekoälyä voidaan hyödyntää varainhankinnan tehostamisessa ja uusien sekä olemassa olevien tukijoiden ja vapaaehtoisten aktivoinnissa.</p>
+                        <div class="module-topics">
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Kohdennetut viestit eri tukijaryhmille – parannetaan sitoutumista</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Varainhankintakampanjoiden materiaalien (sähköpostit, some-postaukset) nopea luonti</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Ideointiapu uusiin tapoihin aktivoida ja kiittää vapaaehtoisia</div></div>
+                        </div>
+                        <p class="benefit">→ Varainhankinnan ja aktivoinnin tehokkuus paranee, viestintä on vaikuttavampaa.</p>
+                    </div>
+
+                    <div class="module-box">
+                        <div class="module-icon">
+                            <span class="emoji-icon">💼</span> MODUULI 5: JOHDON AI-STRATEGIA
+                        </div>
+                        <p>Pelastusarmeijan johdolle suunnattu strateginen osio, jossa rakennetaan kokonaisvaltainen ja realistinen AI-strategia ja implementointisuunnitelma.</p>
+                        <div class="module-topics">
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>AI-investointien hyötyjen arviointi: mihin kannattaa panostaa ensin</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Muutosjohtaminen: miten viedä pieni organisaatio onnistuneesti AI-aikaan</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Tulevaisuuden trendit: valmistautuminen seuraaviin AI-mahdollisuuksiin</div></div>
+                        </div>
+                        <p class="benefit">→ Selkeä strategia ja tiekartta AI:n hyödyntämiseen, järjestön vaikuttavuus maksimoitu.</p>
+                    </div>
+
+                    <div class="module-box">
+                        <div class="module-icon">
+                            <span class="emoji-icon">🛠️</span> MODUULI 6: KÄYTÄNNÖN TYÖPAJAT
+                        </div>
+                        <p>Intensiiviset hands-on -työpajat, joissa ratkaistaan Pelastusarmeijan todellisia haasteita AI:n avulla. Teoria muuttuu käytännöksi.</p>
+                        <div class="module-topics">
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Case: Avustuskampanjan materiaalien luonti alusta loppuun AI:lla</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Case: Vapaaehtoisten aktivointiviestien sarjan suunnittelu ja kirjoittaminen</div></div>
+                            <div class="topic-item"><div class="topic-icon">✓</div><div>Case: Vaikuttavuusraportin koostaminen olemassa olevasta datasta</div></div>
+                        </div>
+                        <p class="benefit">→ Välitön hyöty: valmiit ratkaisumallit todellisiin haasteisiin.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
+                        <span class="carousel-dot" data-index="4"></span>
+                        <span class="carousel-dot" data-index="5"></span>
+                    </div>
+                </div>
+            </div>
+            <a href="#tarjous" class="cta-button">Haluan henkilöstölleni nämä taidot!</a>
+        </div>
+
+        <div id="tarjous" class="special-offer">
+            <h2>Pelastusarmeijan Eksklusiivinen AI-koulutuspaketti</h2>
+            <p>Olemme suunnitelleet Pelastusarmeijalle teidän budjettiinne ja tavoitteisiinne sopivan ratkaisun, joka takaa henkilöstönne AI-osaamisen kehittymisen ja välittömän hyödyn toiminnallenne.</p>
+            
+            <div style="background-color: #fff; padding: 20px; border-radius: 8px; margin: 20px 0; border: 2px solid #0066cc;">
+                <h3 style="color: #0066cc; margin-top: 0;">SUOSITUS: Tehokas Startti: Intensiivinen AI-koulutuspäivä</h3>
+                <span class="price">3 990 € + alv</span>
+                 <p style="text-align:center; font-size: 15px; color: #555; margin-bottom: 15px;">Täydellinen ratkaisu budjettiinne. Antaa koko tiimille vahvan alun tekoälyn hyödyntämiseen.</p>
+                <ul class="features-list">
+                    <li><strong>Koko päivän intensiivikoulutus</strong> (n. 7h) Pelastusarmeijan tiloissa Vuosaressa</li>
+                    <li><strong>Räätälöity sisältö:</strong> keskitymme juuri teidän haasteisiinne ja tavoitteisiinne</li>
+                    <li><strong>Käytännön harjoitukset</strong> todellisilla Pelastusarmeijan case-esimerkeillä</li>
+                    <li><strong>Kattavat koulutusmateriaalit</strong> PDF- ja video-muodossa jälkikäyttöön</li>
+                    <li>Sisältää 30 päivän seurantatuen sähköpostitse</li>
+                    <li>AI-työkalujen peruskäyttöoppaat</li>
+                </ul>
+                <a href="https://www.ai-systeemit.fi/ai-training-consultation" class="cta-button">Toteutetaan tehokas koulutuspäivä!</a>
+            </div>
+
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3 style="color: #555; margin-top: 0;">AI-kumppanuus – Jatkuva Kehitys & Tuki</h3>
+                <span class="price" style="font-size: 28px;">1 990 € + alv / kk</span>
+                <ul class="features-list">
+                    <li><strong>Kuukausittainen 2h räätälöity AI-valmennus/konsultaatio</strong></li>
+                    <li><strong>Pääsy uusimpiin AI-työkaluihin ja -strategioihin</strong></li>
+                    <li><span class="bonus-highlight">BONUS:</span> Kuukausittainen Q&A-klinikka ja pääsy resurssipankkiin</li>
+                    <li>Priorisoitu sähköposti- ja chat-tuki</li>
+                    <li>Joustava sopimus: minimi 3 kk, jonka jälkeen kuukausittain irtisanottavissa.</li>
+                </ul>
+                <a href="https://www.ai-systeemit.fi/ai-training-consultation" class="cta-button" style="background: linear-gradient(135deg, #ffad33, #ff9900); box-shadow: 0 5px 15px rgba(255,153,0,0.3);">Kysy lisää kumppanuudesta!</a>
+            </div>
+            
+            <div style="background-color: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3 style="color: #0066cc; margin-top: 0;">Strateginen Syväsukellus: Kokonaisvaltainen AI-suunnitelma</h3>
+                <span class="price" style="font-size: 28px;">7 990 € + alv</span>
+                <ul class="features-list">
+                    <li>Syvällinen AI-mahdollisuuksien kartoitus Pelastusarmeijalle</li>
+                    <li>Räätälöity 12kk koulutussuunnitelma organisaatiolle</li>
+                    <li>Liiketoimintaprosessien tehostamissuunnitelma AI:n avulla</li>
+                    <li>Johdon strategiatyöpaja (1 päivä) & tiekartan luonti</li>
+                </ul>
+                <a href="https://www.ai-systeemit.fi/ai-training-consultation" class="cta-button" style="background: linear-gradient(135deg, #64b5f6, #1976d2); box-shadow: 0 5px 15px rgba(0,102,204,0.2);">Suunnitellaan AI-strategianne!</a>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <tr>
+                        <th>Osaamisalue</th>
+                        <th>Ennen koulutusta</th>
+                        <th>Koulutuspäivän jälkeen</th>
+                    </tr>
+                    <tr>
+                        <td>AI-työkalujen käyttö</td>
+                        <td>Ei osaamista / satunnaista kokeilua</td>
+                        <td><strong>Systemaattinen perusosaaminen tärkeimmistä työkaluista</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Viestinnän tehokkuus</td>
+                        <td>Manuaalinen, hidas</td>
+                        <td><strong>2-3x nopeampi, selkeämpi viestintä</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Sisällöntuotanto</td>
+                        <td>Aikaa vievää, haastavaa</td>
+                        <td><strong>Jatkuvasti laadukasta, kohdennettua sisältöä nopeammin</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Prosessien automaatio</td>
+                        <td>Kaikki tehdään käsin</td>
+                        <td><strong>Ymmärrys ja kyky automatisoida yksinkertaisia rutiineja</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Vaikuttavuus</td>
+                        <td>Resurssit rajoittavat</td>
+                        <td><strong>Tehokkaampi resurssien käyttö, suurempi yhteiskunnallinen vaikutus</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="roi-box">
+                <h3>Investoinnin tuotto Pelastusarmeijalle:</h3>
+                <p>Koulutus tehostaa pienen tiiminne toimintaa merkittävästi. Keskimäärin AI-kyvykkäät tiimit ovat <strong>47% tehokkaampia</strong>. Teidän tapauksessanne tämä tarkoittaa enemmän aikaa ydintehtäviin.</p>
+                <p>• <strong>Merkittävä ajansäästö:</strong> Arviolta 5-10 tuntia/henkilö/viikko pois rutiinitöistä<br>
+                • <strong>Kasvanut tavoittavuus:</strong> Tehokkaampi viestintä tavoittaa enemmän tukijoita ja avun tarvitsijoita<br>
+                • <strong>Suurempi vaikuttavuus:</strong> Vapautunut aika voidaan käyttää suoraan auttamistyöhön ja ihmisten kohtaamiseen</p>
+                <p><strong>Arvioitu hyöty: Investointi koulutukseen maksaa itsensä takaisin nopeasti lisääntyneenä tehokkuutena ja vaikuttavuutena!</strong></p>
+            </div>
+            <a href="#ota-yhteytta" class="cta-button">Varaa ilmainen konsultaatio!</a>
+            <a href="tel:0407780742" class="cta-secondary">Soita suoraan: 040 778 0742</a>
+        </div>
+
+        <div class="section">
+            <h2>Näin Pelastusarmeijan AI-koulutus etenee:</h2>
+            <p>Olemme suunnitelleet prosessin, joka takaa parhaan oppimistuloksen ja välittömän hyödyn:</p>
+            <div class="timeline-accordion">
+                <div class="timeline-step active">
+                    <div class="timeline-header">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-title">Alkukartoitus & Tavoitteet (1-2 tuntia etänä)</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Kartoitamme Pelastusarmeijan nykytilan, haasteet (esim. aktivointi) ja tavoitteet. Selvitämme tiiminne nykyisen osaamistason ja räätälöimme koulutuspäivän sisällön tarkasti teille sopivaksi.</p>
+                        <p><strong>Tulos:</strong> Selkeä suunnitelma ja sisältö tulevalle koulutuspäivälle.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-title">Intensiivinen Koulutuspäivä (Paikan päällä)</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Toteutamme intensiivisen ja käytännönläheisen koulutuspäivän sovitusti tiloissanne Vuosaressa. Jokainen osallistuja saa hands-on -kokemusta AI-työkaluista ja niiden soveltamisesta omaan työhönsä.</p>
+                        <p><strong>Tulos:</strong> Vahva perusosaaminen ja välittömät taidot AI-työkalujen käyttöön.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-title">Käytännön soveltaminen & 30 päivän tuki</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Koulutuksen jälkeen tiiminne alkaa soveltaa oppimaansa käytäntöön. Tuemme teitä 30 päivän ajan sähköpostitse ja vastaamme kaikkiin matkan varrella herääviin kysymyksiin.</p>
+                        <p><strong>Tulos:</strong> Opitut taidot siirtyvät osaksi arkea ja tuottavat tulosta.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-title">Tulosten arviointi & jatkosuositukset</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>30 päivän tukijakson päätteeksi voimme pitää lyhyen etäpalaverin, jossa arvioimme saavutettuja tuloksia ja edistystä. Annamme suosituksia jatkotoimenpiteille ja osaamisen syventämiselle.</p>
+                        <p><strong>Tulos:</strong> Mitattavat tulokset ja selkeä polku eteenpäin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section why-us-section">
+            <h2>Miksi AI-SYSTEEMIT on paras kumppani Pelastusarmeijan AI-matkalle?</h2>
+            <ul>
+                <li><strong>Ymmärrys järjestötoiminnan haasteista:</strong> Tunnemme toimialanne erityispiirteet – koulutus on 100% relevanttia.</li>
+                <li><strong>Käytännönläheisyys:</strong> Ei tylsää teoriaa – keskitymme työkaluihin ja tekniikoihin, joita voitte käyttää heti.</li>
+                <li><strong>Räätälöinti & Joustavuus:</strong> Koulutus suunnitellaan juuri teidän tarpeidenne mukaan – ei geneerisiä paketteja.</li>
+                <li><strong>Todistetut Tulokset:</strong> Asiakkaamme raportoivat merkittävästä tuottavuuden kasvusta ja paremmista tuloksista.</li>
+                <li><strong>Tuki ja kumppanuus:</strong> Emme jätä teitä yksin – koulutukseen kuuluu seurantatuki, joka varmistaa onnistumisen.</li>
+            </ul>
+        </div>
+
+        <div class="section faq-section">
+            <h2>Usein Kysytyt Kysymykset</h2>
+            <div class="faq-item">
+                <div class="faq-question">Tarvitseeko henkilöstöllä olla teknistä osaamista? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Ei tarvitse! Koulutuksemme on suunniteltu kaikille osaamistasosta riippumatta. Aloitamme perusteista ja etenemme selkeästi ja käytännönläheisesti. Tärkeintä on kiinnostus oppia uutta ja tehostaa omaa työtä.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Mitä hyötyä on koulutuspäivästä verrattuna itseopiskeluun? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Ammattilaisen vetämä koulutuspäivä on tehokkain tapa oppia. Se tarjoaa strukturoidun ja testatun sisällön, räätälöinnin juuri teidän tarpeisiinne, sekä mahdollisuuden esittää kysymyksiä ja saada välitöntä apua. Tämä säästää valtavasti aikaa verrattuna tiedon etsimiseen ja testaamiseen omin päin.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Mitä AI-työkaluja koulutuksessa käsitellään? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Keskitymme järjestötoiminnan kannalta oleellisimpiin ja helppokäyttöisimpiin työkaluihin: ChatGPT ja Microsoft Copilot tekstin ja sisällön tuottamiseen, Canva Magic Studio yksinkertaiseen kuvien ja materiaalien luomiseen, sekä esimerkkejä muista hyödyllisistä työkaluista.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Voiko valmennuksen järjestää etänä? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Kyllä! Tarjoamme koulutuksia joustavasti. Tämä suunnitelma on laadittu toiveenne mukaisesti <strong>paikan päällä toteutettavaksi Vuosaressa</strong>, mutta tarvittaessa toteutus onnistuu myös laadukkaana ja interaktiivisena verkkokoulutuksena.</p>
+                </div>
+            </div>
+             <div class="faq-item">
+                <div class="faq-question">Mitä jos tarvitsemme apua koulutuksen jälkeenkin? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Intensiiviseen koulutuspäivään sisältyy 30 päivän seurantatuki. Jos tämän jälkeen kaipaatte jatkuvaa tukea ja sparrausta, suosittelemme tutustumaan joustavaan AI-kumppanuusmalliimme (kuukausisopimus), joka takaa pitkäjänteisen kehityksen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ota-yhteytta" class="section contact-section">
+            <h2>Valmis nostamaan Pelastusarmeijan toiminnan tehoa ja vaikuttavuutta tekoälyn avulla?</h2>
+            <p>Ottakaa askel kohti tehokkaampaa ja vaikuttavampaa järjestötyötä. Varataan aika ilmaiseen konsultaatioon, jossa voimme viimeistellä koulutuspäivän suunnitelman juuri teille sopivaksi.</p>
+            <a href="https://www.ai-systeemit.fi/ai-training-consultation" class="cta-button">Varaa ilmainen AI-strategiakeskustelu Alexanderin kanssa</a>
+            <p style="text-align: center; margin-top: 20px;">
+                <strong>Alexander Virtanen</strong><br>
+                Perustaja & AI-koulutusasiantuntija<br>
+                <a href="tel:0407780742">040 778 0742</a><br>
+                <a href="mailto:alexander@ai-systeemit.fi">alexander@ai-systeemit.fi</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 AI-SYSTEEMIT Oy. Kaikki oikeudet pidätetään.</p>
+        <p>Y-tunnus: 2871156-8 | Leikosaarentie 27, 00990 Helsinki</p>
+        <p><a href="#">Tietosuojaseloste</a> | <a href="#">Käyttöehdot</a></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Module Carousel Logic
+        const carousel = document.querySelector('.module-carousel');
+        if (carousel) {
+            const carouselInner = carousel.querySelector('.module-carousel-inner');
+            const moduleBoxes = carousel.querySelectorAll('.module-box');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            const prevBtn = carousel.querySelector('.carousel-btn.prev');
+            const nextBtn = carousel.querySelector('.carousel-btn.next');
+            let currentIndex = 0;
+            const totalSlides = moduleBoxes.length;
+
+            function updateCarousel() {
+                if (carouselInner) {
+                    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+                if (dotsContainer) {
+                    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentIndex);
+                    });
+                }
+            }
+
+            if (carouselInner && prevBtn && nextBtn && dotsContainer && totalSlides > 0) {
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateCarousel();
+                });
+                
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach(dot => {
+                    dot.addEventListener('click', (e) => {
+                        const targetIndex = e.target.dataset.index;
+                        if (targetIndex !== undefined) {
+                            currentIndex = parseInt(targetIndex);
+                            updateCarousel();
+                        }
+                    });
+                });
+                updateCarousel(); // Initial display
+            }
+        }
+
+        // Timeline Accordion Logic
+        const timelineSteps = document.querySelectorAll('.timeline-step');
+        timelineSteps.forEach(step => {
+            const header = step.querySelector('.timeline-header');
+            if (header) {
+                header.addEventListener('click', () => {
+                    // Close other active steps
+                    timelineSteps.forEach(s => {
+                        if (s !== step && s.classList.contains('active')) {
+                            s.classList.remove('active');
+                        }
+                    });
+                    // Toggle current step
+                    step.classList.toggle('active');
+                });
+            }
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                     // Close other active FAQ items
+                    faqItems.forEach(i => {
+                        if (i !== item && i.classList.contains('active')) {
+                            i.classList.remove('active');
+                        }
+                    });
+                    // Toggle current FAQ item
+                    item.classList.toggle('active');
+                });
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const hrefAttribute = this.getAttribute('href');
+                if (hrefAttribute && hrefAttribute.length > 1 && hrefAttribute !== '#') {
+                    try {
+                        const targetElement = document.querySelector(hrefAttribute);
+                        if (targetElement) {
+                            e.preventDefault();
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    } catch (error) {
+                        // console.error("Smooth scroll target error for href:", hrefAttribute, error);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+```
